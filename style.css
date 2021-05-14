@@ -1,0 +1,268 @@
+body{
+	margin: 0px;
+	font-family: Georgia,Times,serif;
+}
+
+/* Part 1 - Header */
+.header{
+	background-color: #efefef;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 40px;
+	flex-wrap: wrap;
+}
+.header-inner {
+	display: flex;
+}
+.header-inner a {
+	color: #000;
+	text-decoration: none;
+	/*transition: all 1s;*/
+}
+.header-inner li{
+	margin-left: 40px;
+	margin-right: 30px;
+}
+ul{
+	list-style-type: none;
+	margin: 5px ;
+	padding: 5px;
+	align-items: center;
+}
+.strike{
+	width: 5px;
+	display: inline;
+	position: absolute;
+	margin: 7px -15px;
+	transition: all 1s ease-in-out ;
+}
+.btnline:hover .strike{
+	width: 100px;
+	transition: all 1s ease-in-out ;
+}
+.search{
+	border: 1px solid black;
+	background: transparent;
+	padding: 8px 10px;
+	width: 110px;	 
+}
+.slide-btn{
+	border-radius: 50%;
+	padding: 7px 10px;
+}
+
+/*for ham*/
+/*#sub-menu{
+	background-color: #000;
+	visibility: hidden;
+	width: 500px;
+}
+#sub-menu.active {
+	visibility: visible;
+}*/
+
+/*Part 1.1 - Header */
+.box{
+	text-align: center;
+}
+.box-inner img{
+	width: 100%;
+	height: 500px;
+	cursor: pointer;
+}	
+.text-move{
+	position: absolute;
+	right: 50%;
+	top: 30%;
+	animation: move 1s ease-in;
+	font-size: 45px;
+}
+@keyframes move {
+  0% {transform: translateY(100px);}
+  100% {transform: translateX(0px);}
+}
+.small{
+	font-size: 15px;
+	font-weight: 100;
+	color: gray;
+}
+
+/*for media query*/
+@media only screen and (max-width: 600px){
+	.text-move{
+		position: absolute;
+		right: 50%;
+		top: 12%;
+		animation: move 1s ease-in;
+	}
+	@keyframes move {
+  		0% {transform: translateY(100px);}
+  		100% {transform: translateX(0px);}
+	}	
+
+}
+#ham-menu{
+	display: none;
+}
+#ham-menu{
+	background-color: #000;
+	visibility: hidden;
+	width: 200px;
+}
+#ham-menu a{
+	color: #fff;
+}
+/*@media only screen and (max-width: 600px){
+	#ham-menu{
+		display: block;
+		background-color: red;
+	}
+	#ham-menu.active {
+		visibility: visible;
+	}
+}*/
+
+
+
+/* Part 2 - Products */
+.heading{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 25px 40px;
+}
+.heading hr{
+	width: 40%;
+}
+.heading a{
+	text-decoration: none;
+	color: #000;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	padding: 15px 40px;
+}
+.col-4{
+	flex-basis: 20%;
+	padding: 10px;
+	min-width: 200px;
+	margin-bottom: 40px;
+	transition: transform 0.5s;
+}
+.col-4:hover{
+	opacity: 0.8;
+}
+.col-4 img{
+	width: 100%;
+	height: 270px;
+}
+.col-4 p{
+	font-size: 14px;
+}
+.col-4 h4{
+	margin-bottom: 5px;
+}
+
+/* media query */
+@media only screen and (max-width: 800px){
+	.row{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-around;
+		padding: 15px 40px;
+	}
+	.col-4{
+		flex-basis: 40%;
+		padding: 10px;
+		min-width: 200px;
+		margin-bottom: 40px;
+		transition: transform 0.5s;
+	}
+}
+
+/* Part 3 slider */
+.slider-box{
+	background-color: #efefef;
+}
+.slider{
+	display: grid;
+	height: 400px;
+	/*margin: 5px 30px;*/
+	grid-template-columns: 0.2fr 1fr 3fr 0.2fr;
+	/*grid-template-areas: "btn-prev slider-img slider-info btn-next"*/
+	grid-gap: 0.2rem;
+	/*background-color: #efefef;*/
+}
+.slider-img{
+	text-align:center;
+}
+.slider-img img{
+	height: 80%;
+	width: 80%;
+	margin-top: 25px;
+}
+.slider-info {
+	margin: 50px;
+}
+.slider-info h2{
+	margin-bottom: 2px;
+}
+.slider-info h4{
+	margin:0;
+}
+.slider-info p{
+	width: 75%;
+}
+.slider-info button:hover{
+	transform: translateX(-4px);
+	padding-right: 40px;	
+}
+.btn-prev {
+	margin: auto;
+}
+.btn-next{
+	margin: auto;
+}
+
+/* Footer */
+
+.footer{
+	display: flex;
+	justify-content: space-around;
+	padding: 15px 0px;
+	background-color: aliceblue;
+	align-items: center;
+}
+.newsletter input{
+	padding: 5px 5px;
+	text-align: center;
+	border: 1px solid #beb2b2;
+}
+.btn{
+	border-bottom: 1px solid black;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	font-weight: 800;
+	cursor: pointer;
+	margin: 10px;
+	background: none;
+
+}
+.social-media ul{
+	display: flex;
+}
+.social-media li{
+	margin: 0px 15px;
+	border-radius: 50%;
+	list-style-type: none
+}
+.social-media a{
+	text-decoration: none;
+}
+
